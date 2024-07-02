@@ -8,6 +8,6 @@ namespace HocusFocus.Core
 {
     public class BlacklistConfig
     {
-        public List<string>? BlockedApps { get; set; }
+        public List<string> BlockedApps { get; set; } = new List<string>();
     }
 }
