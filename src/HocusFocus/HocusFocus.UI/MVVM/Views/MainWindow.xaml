@@ -27,11 +27,12 @@
                     <ColumnDefinition Width="auto" />
                 </Grid.ColumnDefinitions>
 
-                <TextBox Grid.Column="0" Text="Search" />
+                <TextBox Grid.Column="0"
+                         Text="{Binding SearchBarViewModel.SearchText, UpdateSourceTrigger=PropertyChanged}" />
             </Grid>
 
             <ScrollViewer Height="200" VerticalScrollBarVisibility="Auto">
-                <ItemsControl ItemsSource="{Binding ProcessItems}">
+                <ItemsControl ItemsSource="{Binding FilteredProcessItems}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <controls:ProcessListItem DataContext="{Binding}" />
