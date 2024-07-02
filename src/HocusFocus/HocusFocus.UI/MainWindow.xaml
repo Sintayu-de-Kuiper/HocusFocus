@@ -3,10 +3,31 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:HocusFocus.UI"
+        xmlns:controls="clr-namespace:HocusFocus.UI.Resources.Controls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Hocus Focus" Height="450" Width="400"
+        ResizeMode="CanMinimize">
+    <StackPanel Margin="50, 50">
+        <StackPanel Margin="0,0,0,50">
+            <Button HorizontalAlignment="Center" Padding="5">Focus</Button>
+        </StackPanel>
 
-    </Grid>
+        <StackPanel Width="220">
+            <TextBlock HorizontalAlignment="Center">Whitelist</TextBlock>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+
+                <TextBox Grid.Column="0" Text="Search" />
+                <CheckBox Grid.Column="1" />
+            </Grid>
+
+            <controls:ProcessListItem ProcessName="Item" />
+            <controls:ProcessListItem ProcessName="Item" />
+            <controls:ProcessListItem ProcessName="Item" />
+        </StackPanel>
+    </StackPanel>
 </Window>

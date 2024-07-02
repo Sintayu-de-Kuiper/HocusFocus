@@ -12,4 +12,13 @@
     <ProjectReference Include="..\HocusFocus.Core\HocusFocus.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="MVVM\Models\" />
+    <Folder Include="MVVM\ViewModels\" />
+    <Folder Include="MVVM\Views\" />
+    <Folder Include="Resources\Icons\" />
+    <Folder Include="Resources\Images\" />
+    <Folder Include="Resources\Theme\" />
+  </ItemGroup>
+
 </Project>
