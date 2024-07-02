@@ -1,4 +1,4 @@
-﻿<Window x:Class="HocusFocus.UI.MainWindow"
+﻿<Window x:Class="HocusFocus.UI.MVVM.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -13,7 +13,8 @@
     </Window.DataContext>
     <StackPanel Margin="50, 50">
         <StackPanel Margin="0,0,0,50">
-            <Button HorizontalAlignment="Center" Padding="5">Focus</Button>
+            <Button HorizontalAlignment="Center" Padding="5" Content="{Binding FocusModeButtonText}"
+                    Command="{Binding ToggleFocusMode}" />
         </StackPanel>
 
         <StackPanel Width="220">
@@ -26,15 +27,13 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBox Grid.Column="0" Text="Search" />
-                <CheckBox Grid.Column="1" IsChecked="{Binding AllAppsSelected, Mode=TwoWay}" />
             </Grid>
 
             <ScrollViewer Height="200" VerticalScrollBarVisibility="Auto">
                 <ItemsControl ItemsSource="{Binding ProcessItems}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <controls:ProcessListItem ProcessName="{Binding Name}"
-                                                      IsChecked="{Binding IsChecked, Mode=TwoWay}" />
+                            <controls:ProcessListItem DataContext="{Binding}" />
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
