@@ -26,7 +26,7 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBox Grid.Column="0" Text="Search" />
-                <CheckBox Grid.Column="1" IsChecked="{Binding SelectAll, Mode=TwoWay}" />
+                <CheckBox Grid.Column="1" IsChecked="{Binding AllAppsSelected, Mode=TwoWay}" />
             </Grid>
 
             <ScrollViewer Height="200" VerticalScrollBarVisibility="Auto">
