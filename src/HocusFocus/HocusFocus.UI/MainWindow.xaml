@@ -25,9 +25,39 @@
                 <CheckBox Grid.Column="1" />
             </Grid>
 
-            <controls:ProcessListItem ProcessName="Item" />
-            <controls:ProcessListItem ProcessName="Item" />
-            <controls:ProcessListItem ProcessName="Item" />
+            <ScrollViewer Height="200" Margin="0,0,-17,0">
+                <StackPanel>
+                    <controls:ProcessListItem ProcessName="Item 1" />
+                    <controls:ProcessListItem ProcessName="Item 2" />
+                    <controls:ProcessListItem ProcessName="Item 3" />
+                    <controls:ProcessListItem ProcessName="Item 4" />
+                    <controls:ProcessListItem ProcessName="Item 5" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                    <controls:ProcessListItem ProcessName="Item 6" />
+                </StackPanel>
+            </ScrollViewer>
         </StackPanel>
     </StackPanel>
 </Window>
