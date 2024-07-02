@@ -14,7 +14,7 @@ namespace HocusFocus.Core
     public class ProcessController(ConfigurationManager configManager)
     {
         private ConfigurationManager _configManager = configManager;
-        private CancellationTokenSource _cancellationTokenSource;
+        private CancellationTokenSource? _cancellationTokenSource;
 
         // Method to enforce the blacklist by terminating blocked apps
         public void EnforceBlacklist()
