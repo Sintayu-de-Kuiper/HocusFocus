@@ -1,24 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <UseWPF>true</UseWPF>
-  </PropertyGroup>
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\HocusFocus.Core\HocusFocus.Core.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\HocusFocus.Core\HocusFocus.Core.csproj"/>
+    </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="MVVM\Models\" />
-    <Folder Include="MVVM\ViewModels\" />
-    <Folder Include="MVVM\Views\" />
-    <Folder Include="Resources\Icons\" />
-    <Folder Include="Resources\Images\" />
-    <Folder Include="Resources\Theme\" />
-  </ItemGroup>
+    <ItemGroup>
+        <Folder Include="MVVM\Views\"/>
+        <Folder Include="Resources\Icons\"/>
+        <Folder Include="Resources\Images\"/>
+        <Folder Include="Resources\Theme\"/>
+    </ItemGroup>
 
 </Project>

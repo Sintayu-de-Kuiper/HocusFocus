@@ -4,9 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:controls="clr-namespace:HocusFocus.UI.Resources.Controls"
+        xmlns:viewModels="clr-namespace:HocusFocus.UI.MVVM.ViewModels"
         mc:Ignorable="d"
         Title="Hocus Focus" Height="450" Width="400"
         ResizeMode="CanMinimize">
+    <Window.DataContext>
+        <viewModels:MainViewModel />
+    </Window.DataContext>
     <StackPanel Margin="50, 50">
         <StackPanel Margin="0,0,0,50">
             <Button HorizontalAlignment="Center" Padding="5">Focus</Button>
@@ -22,41 +26,18 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBox Grid.Column="0" Text="Search" />
-                <CheckBox Grid.Column="1" />
+                <CheckBox Grid.Column="1" IsChecked="{Binding SelectAll, Mode=TwoWay}" />
             </Grid>
 
-            <ScrollViewer Height="200" Margin="0,0,-17,0">
-                <StackPanel>
-                    <controls:ProcessListItem ProcessName="Item 1" />
-                    <controls:ProcessListItem ProcessName="Item 2" />
-                    <controls:ProcessListItem ProcessName="Item 3" />
-                    <controls:ProcessListItem ProcessName="Item 4" />
-                    <controls:ProcessListItem ProcessName="Item 5" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                    <controls:ProcessListItem ProcessName="Item 6" />
-                </StackPanel>
+            <ScrollViewer Height="200" VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding ProcessItems}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <controls:ProcessListItem ProcessName="{Binding Name}"
+                                                      IsChecked="{Binding IsChecked, Mode=TwoWay}" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
             </ScrollViewer>
         </StackPanel>
     </StackPanel>

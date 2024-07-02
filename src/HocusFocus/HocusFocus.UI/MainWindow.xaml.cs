@@ -1,16 +1,13 @@
 ﻿using System.Windows;
-using HocusFocus.Core;
+using HocusFocus.UI.MVVM.ViewModels;
 
-namespace HocusFocus.UI
+namespace HocusFocus.UI;
+
+public partial class MainWindow : Window
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    public MainWindow()
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+        DataContext = new MainViewModel();
     }
 }
