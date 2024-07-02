@@ -20,6 +20,10 @@ namespace HocusFocus.UI
     {
         public MainWindow()
         {
+            ConfigurationManager configurationManager = new ConfigurationManager();
+            ProcessController processController = new(configurationManager);
+
+            processController.StartMonitoring();
             InitializeComponent();
         }
     }

@@ -17,7 +17,7 @@ namespace HocusFocus.Core
         private CancellationTokenSource? _cancellationTokenSource;
 
         // Method to enforce the blacklist by terminating blocked apps
-        public void EnforceBlacklist()
+        private void EnforceBlacklist()
         {
             var config = _configManager.LoadConfiguration();
             var blockedApps = config.BlockedApps;
@@ -32,14 +32,14 @@ namespace HocusFocus.Core
                     // Check if the process name (without extension) is on the blacklist
                     if (blockedApps.Contains(process.ProcessName))
                     {
-                        Console.WriteLine($"Terminating blacklisted process: {process.ProcessName}");
+                        Debug.WriteLine($"Terminating blacklisted process: {process.ProcessName}");
                         process.Kill();
                     }
                 }
                 catch (Exception ex)
                 {
                     // Handle any errors that might occur when attempting to kill the process
-                    Console.WriteLine($"Error terminating process {process.ProcessName}: {ex.Message}");
+                    Debug.WriteLine($"Error terminating process {process.ProcessName}: {ex.Message}");
                 }
             }
         }
@@ -54,6 +54,7 @@ namespace HocusFocus.Core
         // Asynchronous loop checking for blacklisted applications
         private async Task MonitorProcesses(CancellationToken cancellationToken)
         {
+            Debug.WriteLine("Monitoring has been started.");
             try
             {
                 while (!cancellationToken.IsCancellationRequested)
@@ -64,7 +65,7 @@ namespace HocusFocus.Core
             }
             catch (TaskCanceledException)
             {
-                Console.WriteLine("Monitoring has been stopped.");
+                Debug.WriteLine("Monitoring has been stopped.");
             }
         }
 
@@ -72,6 +73,7 @@ namespace HocusFocus.Core
         public void StopMonitoring()
         {
             _cancellationTokenSource?.Cancel();
+            Debug.WriteLine("Monitoring has been stopped.");
         }
     }
 }
