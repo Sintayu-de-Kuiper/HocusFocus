@@ -1,4 +1,4 @@
-﻿using System.Windows;
+using System.Windows;
 using HocusFocus.UI.MVVM.ViewModels;
 
 namespace HocusFocus.UI;
