@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HocusFocus.UI", "HocusFocus.UI\HocusFocus.UI.csproj", "{4A69F17C-4E30-410C-BB1B-5A281FF8633E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HocusFocus.UI", "HocusFocus.UI\HocusFocus.UI.csproj", "{4A69F17C-4E30-410C-BB1B-5A281FF8633E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HocusFocus.Core", "HocusFocus.Core\HocusFocus.Core.csproj", "{6E102B1F-F02C-4282-95A7-C830915688BD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HocusFocus.Service", "HocusFocus.Service\HocusFocus.Service.csproj", "{C5433557-CADE-47D8-B0FF-0378E6A286CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HocusFocus.Core", "HocusFocus.Core\HocusFocus.Core.csproj", "{6E102B1F-F02C-4282-95A7-C830915688BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{6E102B1F-F02C-4282-95A7-C830915688BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E102B1F-F02C-4282-95A7-C830915688BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E102B1F-F02C-4282-95A7-C830915688BD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C5433557-CADE-47D8-B0FF-0378E6A286CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C5433557-CADE-47D8-B0FF-0378E6A286CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C5433557-CADE-47D8-B0FF-0378E6A286CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C5433557-CADE-47D8-B0FF-0378E6A286CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
