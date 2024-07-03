@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Text.Json;
 using System.IO;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 
 namespace HocusFocus.Core
@@ -47,6 +48,7 @@ namespace HocusFocus.Core
                 string json = JsonSerializer.Serialize(config, new JsonSerializerOptions { WriteIndented = true });
                 // Write the JSON to the file
                 File.WriteAllText(ConfigFilePath, json);
+                Debug.WriteLine("Successfully saved the configuration!");
             }
             catch (Exception ex)
             {
