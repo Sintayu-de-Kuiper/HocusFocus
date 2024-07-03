@@ -19,7 +19,7 @@
         </StackPanel>
 
         <StackPanel Width="220">
-            <TextBlock HorizontalAlignment="Center">Whitelist</TextBlock>
+            <TextBlock HorizontalAlignment="Center">Blacklist</TextBlock>
 
             <Grid>
                 <Grid.ColumnDefinitions>
