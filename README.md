@@ -1,1 +1,1 @@
-# HocusFocusSchool project, creating a Windows application for blocking distracting applications allowing the user to focus on theirwork.Made using WPF.![HocusFocus](https://github.com/Sintayu-de-Kuiper/HocusFocus/assets/119070855/7dc8107d-275b-4bc4-a197-30b009cb6c42)
+# HocusFocusSchool project, creating a Windows application for blocking distracting applications allowing the user to focus on theirwork.Made using WPF.![HocusFocus](https://github.com/Sintayu-de-Kuiper/HocusFocus/assets/119070855/14477b10-676c-46af-8c5b-b5759ad6706f)
